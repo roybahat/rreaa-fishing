@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#04233a" />
+    <title>RREAA Fly Fishing</title>
+    <meta name="description" content="A little time on the river with the RREAA." />
+    <script type="module" crossorigin src="./assets/index-DNAV9cI8.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BkxYa_l-.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <a class="brand" href="./" aria-label="RREAA Fly Fishing home">
+          <svg class="shark" aria-hidden="true" viewBox="0 0 32 16" fill="currentColor"><path d="M2 8h5V6h6V4h3V0h2v4h5v2h4V4h3v3h-2v2h2v3h-3v-2h-4v2h-7v3h-2v-3H8v-2H2z"/><path d="M7 6h2v2H7z" fill="#04233a"/></svg>
+          <span>RREAA<span class="brand-sub">RIVERSIDE DIVISION</span></span>
+        </a>
+        <span class="private-note">Good company.<br>Questionable technique.</span>
+      </header>
+
+      <section id="character-select" class="character-select" aria-labelledby="select-title">
+        <div class="select-heading"><span class="arcade-kicker">RREAA · RIVER EDITION</span><h1 id="select-title">CHOOSE YOUR ANGLER</h1></div>
+        <div class="select-arena">
+          <div class="selected-fighter" aria-live="polite" aria-atomic="true">
+            <div class="selected-art">
+              <span class="player-label" aria-hidden="true">1P</span>
+              <img id="selected-portrait" class="selected-portrait" alt="" />
+              <img id="selected-sprite" class="selected-sprite" alt="" />
+            </div>
+            <div class="selected-copy"><span class="arcade-kicker">READY TO WADE</span><h2 id="selected-name">Marc</h2><span id="selected-full-name">Marc Katz</span><p id="selected-quote">All this reach. Still the same fish.</p></div>
+          </div>
+          <div class="roster-side"><div id="roster" class="roster-grid" role="group" aria-label="Choose an angler"></div><p class="roster-hint">Pick a face. Leave the agenda.</p></div>
+        </div>
+        <div class="select-bottom"><p id="roster-status" role="status">Gathering the roommates…</p><button id="start-fishing" class="action-button select-start" type="button" disabled>Let’s fish <span aria-hidden="true">▶</span></button><span class="selection-help">Tap a portrait or use the arrow keys</span></div>
+      </section>
+
+      <section hidden class="game" aria-label="Fly fishing game" data-phase="loading">
+        <div class="game-top">
+          <div class="angler">
+            <img id="portrait" width="44" height="44" alt="Pixel portrait of Marc" />
+            <div><span class="small-label">ON THE RIVER</span><strong id="angler-name">Marc Katz</strong><button id="change-angler" class="change-angler" type="button">Change angler</button></div>
+          </div>
+          <div class="score"><span class="small-label">TROUT LANDED</span><strong id="catch-count">00</strong></div>
+        </div>
+
+        <div class="river-wrap">
+          <canvas id="river" width="384" height="224" role="img" aria-label="Marc stands in a rocky, willow-lined river. Follow the instructions below to cast and catch a trout."></canvas>
+          <div class="scene-tag"><span class="live-dot"></span>CATCH &amp; RELEASE</div>
+          <div id="scene-caption" class="scene-caption" aria-hidden="true">A good day to accomplish very little.</div>
+          <div id="catch-celebration" class="catch-celebration" hidden aria-hidden="true">
+            <div class="catch-card">
+              <span class="catch-kicker" aria-hidden="true">★ &nbsp; ★ &nbsp; ★</span>
+              <strong class="catch-title">YOU LANDED IT!</strong>
+              <canvas id="trophy-fish" width="96" height="48"></canvas>
+              <span id="catch-size" class="catch-size"></span>
+              <span id="catch-line" class="catch-verdict">Worth the wait.</span>
+              <span id="catch-total" class="catch-total"></span>
+            </div>
+          </div>
+          <div id="pause-overlay" class="pause-overlay" hidden>
+            <span class="eyebrow">NO RUSH</span><strong>The river can wait.</strong><span>Press Resume when you’re ready.</span>
+          </div>
+          <div id="load-message" class="load-message" role="status">Heading down to the river…</div>
+        </div>
+
+        <div class="controls">
+          <ol class="steps" aria-label="Fishing steps">
+            <li>01 <span>CAST</span></li><li>02 <span>DRIFT</span></li><li>03 <span>STRIKE</span></li><li>04 <span>REEL</span></li>
+          </ol>
+          <div class="action-row">
+            <div class="instruction" role="status" aria-live="polite" aria-atomic="true">
+              <h2 id="instruction-title">The river is yours.</h2>
+              <p id="instruction-detail">Cast upstream. Watch the orange indicator.</p>
+            </div>
+            <button id="action" class="action-button" type="button" disabled>Cast your line <span aria-hidden="true">↗</span></button>
+          </div>
+          <div id="reel-meter" class="reel-meter" hidden>
+            <div class="reel-dots" role="progressbar" aria-label="Reeling progress" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <span id="reel-time" aria-hidden="true">4.0s</span>
+          </div>
+          <div class="control-foot">
+            <span>Tap the button or press <kbd>SPACE</kbd></span>
+            <div class="utility-controls"><button id="sound" class="quiet-button" type="button" aria-label="Sound effects" aria-pressed="true">Sound: on</button>
+            <button id="pause" class="quiet-button" type="button" disabled aria-pressed="false">Pause</button></div>
+          </div>
+        </div>
+      </section>
+      <footer><span>All motions subject to the current.</span><span id="session-note">One river. No agenda.</span></footer>
+    </main>
+  </body>
+</html>
